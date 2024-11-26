@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div id="fondo_total">
+<div id="tabla">
+    <div id="header-tabla">
+        <div>Número</div>
+        <div>Mes</div>
+        <div>Usos</div>
+        <div>Cobrado</div>
+    </div>
+    @for (reporte of reportes; track $index) {
+    <div  class="fila">
+        <div>{{ $index + 1 }}</div>
+        <div>{{ reporte.mes }}</div>
+        <div>{{ reporte.usos }}</div>
+        <div>${{ reporte.cobro }}</div>
+    </div>
+  }
+</div>
+</div>

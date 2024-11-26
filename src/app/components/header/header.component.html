@@ -1,0 +1,10 @@
+<header>
+    <h1 id="Parking">Parking App</h1>
+    <nav>
+        <a [routerLink]="['/estado-cocheras']" routerLinkActive="activa">Estado de cocheras</a>
+        @if(esAdmin){
+            <a [routerLink]="['/reportes']" routerLinkActive="activa" >Reportes</a>
+        }        
+    </nav>
+    <a id="cerrar-sesion" (click)="cerrarSesion()">Cerrar sesión</a>
+    </header>

@@ -1,0 +1,91 @@
+header {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    display: flex;
+    justify-content: space-between; /* Espacio entre el título y la navegación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+}
+#Parking {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #ff9800; 
+    font-family: 'Poppins', sans-serif;
+}
+
+#parking:hover{
+    transform: scale(1.05);
+}
+
+.botones{
+    background-color: transparent;
+    color: #e8eaed;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botones:hover{
+    color: rgb(208, 208, 208);
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+nav a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    color: white; /* Color de texto blanco */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+nav a:hover {
+    background-color: #ff9800; /* Color de fondo al pasar el cursor o si está activo */
+    color: #1e1e1e; /* Color de texto al estar activo */
+}
+
+#cerrar-sesion {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #Parking {
+        margin-bottom: 20px;
+    }
+}

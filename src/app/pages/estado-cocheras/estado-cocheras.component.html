@@ -1,0 +1,40 @@
+<app-header></app-header>
+<main>
+<body>
+    <div class="tabla">
+        <div class="header-tabla">
+            <div>Nro</div>
+            <div>Disponibilidad</div>
+            <div>Ingreso</div>
+            <div>Acciones</div>
+        </div>
+        @for(cochera of filas; track cochera.id){           
+            @if (!cochera.eliminada) {
+                <div class="filas">
+                    <div>{{ cochera.id }}</div>
+                    @if (cochera.activo) {
+                        <button (click)="abrirModalCerrarEstacionamiento(cochera.id)">{{ cochera.activo.patente }}</button>
+                    } @else if (cochera.deshabilitada) {
+                        <div class="disponibilidad ocupada">No disponible</div>
+                    } @else {
+                        <button class="disponibilidad disponible" (click)="abrirModalNuevoEstacionamiento(cochera.id)">Disponible</button>
+                    }
+                    <div>{{ cochera.activo?.horaIngreso }}</div>
+                    <div class="acciones-container">
+                        <button (click)="habilitarCochera(cochera.id)">Habilitar</button>
+                        <button (click)="deshabilitarCochera(cochera.id)">Deshabilitar</button>
+                        @if (esAdmin) {
+                            <button (click)="abrirModalEliminarCochera(cochera.id)">Eliminar</button>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    @if (esAdmin) {
+        <div class="center-content">
+            <button (click)="agregarCochera()" class="boton-importante">Agregar cochera</button>
+        </div>
+    }
+</body>
+</main>
